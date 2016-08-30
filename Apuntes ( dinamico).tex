@@ -1,0 +1,187 @@
+\documentclass[13pt,twoside]{article}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{mathtools}
+\usepackage{anysize}
+\usepackage{graphicx}
+\marginsize{2cm}{2cm}{2cm}{2cm}
+\title{Apuntes Electromagnetismo II}
+\date{}
+\author{Israel Obreque Maureira}
+\begin{document}
+
+\maketitle
+
+\section{Introduccion}
+Sabemos que dos alambres que transportan corrientes estables interactuan a traves de sus campos magneticos( generados por sus corrientes).Esta interaccion es debida a que la corriente en uno de los alambres genera un campo magnetico que ejerce una fuerza sobre la corriente en el otro alambre.\\
+
+\begin{figure}[htb]
+ \centering
+   \includegraphics[width=0.5\textwidth]{imagen1}
+  \caption{Campo magnetico generado por dos corrientes paralelas}	
+  \label{fig:ejemplo}
+\end{figure}
+
+
+
+\begin{figure}[htb]
+ \centering
+   \includegraphics[width=0.6\textwidth]{imagen}
+  \caption{Campo magnetico generado por dos corrientes paralelas}	
+  \label{fig:ejemplo}
+\end{figure}
+
+
+
+En el caso de alambres rectos la magnitud del campo producido por el conductor inferior esta dado por ( Ley de ampere)
+
+
+\begin{equation}
+\displaystyle\oint \vec{B}\cdot\vec{dl}=\mu_0I_{enc}\rightarrow \displaystyle B=\frac{\mu_0I{enc}}{2 \pi r}
+\end {equation}
+
+La fuerza que ejerce este campo sobre una longitud del conductor superior es:
+
+\begin{equation}
+\displaystyle\vec{F}=I'\vec{L}\times\vec{B}\rightarrow\displaystyle\frac{F}{L}=I'B=\frac{\mu_0II'}{2\pi r}
+\end{equation} \\	
+
+Observaciones:\\
+
+$\bullet$ La direccion de la fuerza se determina a partir de la regla de la mano derecha.\\
+
+$\bullet$ Dos conductores paralelos que transportan corrientes en el mismo sentido se atraen uno al otro.\\
+
+$\bullet$ Dos conductores paralelos que transportan corrientes en sentidos opuestos se repelen entre si.\\
+
+sin embargo cuando hay una corriente variable existe una interaccion adicional,esto es debido a que la variacion temporal de la corriente produce que el campo magnetico asociado a esta sea una funciion del tiempo.Por lo tanto deacuerdo a la ley de induccion de Faraday este hecho deberia inducir una corriente:
+
+\begin{equation}
+\displaystyle\epsilon=-\frac{d\phi_{B}}{dt}
+\end{equation}
+
+consideremos dos bobinas de alambre una cerca de la otra (figura 3).\\
+
+\begin{figure}[htb]
+ \centering
+   \includegraphics[width=0.4\textwidth]{imagen2}
+  \caption{}
+  \label{} 
+\end{figure}
+
+la corriente $i_{1}$(variable) genera un campo magnetico(indicado por las lineas de color azul), y algunas de estas lineas de campo pasan por la bobina 2.\\
+\\
+$\phi_{B_{2}}$ es el flujo magnetico a traves de cada espira de la bobina 2, causado por la corriente $i_{1}$ en la bobina 1. El flujo total en la bobina de $N_{2}$ espiras es entonces $N_{2}\phi_{B_{2}}$.\\
+
+
+cuando $i_{1}$ cambia, $\phi_{B_{2}}$ cambia; este flujo cambiante induce una $fem$ (total) $\phi_{2}$ en la bobina 2, dada por:
+
+\begin{equation}
+\displaystyle\phi_{2}=-N_{2}\frac{d\phi_{B_{2}}}{dt}
+\end{equation}
+
+Por otra parte, sabemos que en el vacio el campo magnetico es proporcional a $i_{1}$, de manera que $\phi_{B_{2}}$ tambien es proporcional a $i_{1}$:
+
+\begin{equation}
+N_{2}\phi_{B_{2}}=M_{21}i_{1}
+\end{equation}
+
+Luego:
+
+\begin{equation}
+N_{2}\frac{d\phi_{B_{2}}}{dt}=M_{21}\frac{di_{1}}{dt}
+\end{equation}
+
+ y por lo tanto:
+ 
+ \begin{equation}
+ \epsilon_{2}=-M_{21}\frac{di_{1}}{dt}
+ \end{equation}
+ 
+ es decir, un cambio en la corriente $i_{1}$ en la bobina 1 induce una $fem$ en la bobina 2, que es directamente proporcional a la tasa de cambio de $i_{1}$.
+ La constante de proporcionalidad $M_{21}$, la cual podemos escribir como:
+ 
+ \begin{equation}
+ \displaystyle M_{21}=\frac{N_{2}\phi_{B_{2}}}{i_{1}}
+ \end{equation}
+ 
+ la llamamos inductancia mutua de las dos bobinas y es una constante que depende solo de la geometria de las dos bobinas(tamano , forma , numero de espiras , orientacion de cada una , separacion entre ellas ). Si las espiras no estan en el vacio , $M_{21}$ tambien dependera de las propiedades magnticas del medio ( siempre y cuando este sea un medio lineal: $\mu=K_{m}\mu_{0}$ ).Por otra parte si el material no es lineal, $M_{21}$ dependera dependera tambien de la corriente $i_{1}$. Al hacer un analisis para el caso opuesto, en el que una corriente cambiante $i_{2}$ en la bobina 2 causa un flujo cambiante $\phi_{B}$ y una fem $\epsilon_{2}$ en la bobina 1, esperariamos que la constante correspondiente $M_{12}$ fuera diferente de  $M_{21}$  porque , en general, las dos bobinas no son identicas y el flujo a traves de ellas no es el mismo. Sin embargo, $M_{12}$ siempre es igual a $M_{21}$, aun cuando las dos bobinas no sean simetricas, por lo tanto:
+ 
+ \begin{equation}
+ \displaystyle\epsilon_{2}=-M\frac{di_{2}}{dt},\epsilon_{1}=-M\frac{di_{2}}{dt}
+\end {equation}
+
+donde:
+
+\begin{equation}
+M=\frac{N_{2}\phi_{B_{2}}}{i_{1}}=\frac{ N_{1}\phi_{B_{1}}}{i_{2}}
+\end {equation}
+
+La unidad del sistema internacional para la inductancia mutua es el Henry, donde:
+
+\begin{equation}
+1[H]=1[\frac{Vs}{A}]=1[\omega s ]=1[\frac{J}{A^2}]
+\end{equation}
+
+\section{Autoinductancia}
+Una corriente variable en una bobina tambien induce una $fem$ en esa misma bobina, la cual recibe el nombre de inductor, y la relacion de la corriente con la $fem$ esta descrita por la inductancia ( tambien llamada autoinductancia) de la bobina.\\
+
+Cuando en un circuito esta presente una corriente, se establece un campo magnetico que crea un flujo magnetico a traves del mismo circuito, este flujo cambia cuando la corriente cambia.Asi, cualquier cualquier circuito que conduzca una corriente variable tiene una fem inducida en el por la variacion en su propio campo magnetico.\\
+
+Esa clase de fem se denomina fem autoinducida y segun la ley de lenz siempre se opone al cambio en la corriente que causo la fem, y de ese modo hace mas dificil que haya variaciones en la corriente.El efecto se intensifica considerablemente si el circuito incluye una bobina con N espiras de alambre. Como resultado de la corriente $i$, hay un flujo magnetico medio $\phi_{B}$ a traves de cada vuelta de la bobina.
+
+\begin{figure}[htb]
+\centering
+   \includegraphics[width=0.4\textwidth]{imagen3}
+  \caption{}
+  \label{} 
+\end{figure}
+
+En analogia con la definicion de la inductancia mutua, definimos la autoinductancia L del circuito como:
+
+\begin{equation}
+\displaystyle L=\frac{N\phi_{B}}{i}
+\end {equation}
+
+si la corriente $i$ en el circuito cambia, tambien lo hace el flujo $\phi_{B}$:
+	
+\begin{equation}
+\displaystyle N\frac{d\phi_{B}}{dt}=L\frac{di}{dt}
+\end{equation}
+Usando la ley de Faraday para una bobina con N espiras obtenemos que la $fem$ autoinducida es:
+
+\begin{equation}
+\epsilon=-L\frac{di}{dt}
+\end{equation}
+
+un elemento de circuito disena!do para tener una inductancia ( o autoinductancia) se llama inductor, o bobina de autoinduccion. Los inductores son indispensables en los circuitos electronicos modernos y su finalidad es oponerse a cualquier variacion en la corriente a traves del circuito: mantiene una corriente estable a pesar de las fluctuaciones en la fem aplicada.
+
+\section{ Energia del campo magnetico}
+ \subsection{ Energia almacenada en un inductor}
+ el establecimiento de una corriente en un inductor requiere un suministro de energia, y un inductor que conduce corriente contiene energia almacenada.  
+ 
+ \begin{figure}[htb]
+\centering
+   \includegraphics[width=0.6\textwidth]{imagen4}
+  \caption{}
+  \label{} 
+\end{figure}
+
+En la figura , una corriente creciente $i$ en el conductor produce una fem 
+ $\epsilon$ entre sus terminales, y una diferencia de potencial correspondiente $V_{ab}$ entre las terminales de la fuente, con el punto $a$ a mayor potencial que el $b$.\\
+ suponemos que el inductor tiene una resistencia igual a cero, por lo que dentro del inductor no se disipa energia.\\
+ \\
+ $\bullet$ sea $i$ la corriente en cierto instante y su tasa de cambio $\frac{di}{dt}$\\
+ \\
+ $\bullet$ la corriente va en aumento, de manera que $\frac{di}{dt}>0$\\
+ \\
+ El voltaje entre las terminales $a$ y $b$ del inductor en ese instante es:
+ \begin{equation}
+ \displaystyle v_{ab}=L\frac{di}{dt}
+\end{equation}
+demostacion:
+ 
+
+\end{document}
